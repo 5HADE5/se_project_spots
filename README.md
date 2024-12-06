@@ -5,4 +5,6 @@ This project is made so all the elements are displayed correctly on popular scre
 
 Link to github project : https://github.com/5HADE5/se_project_spots.git
 
+Link to github pages : https://5hade5.github.io/se_project_spots/
+ 
 Link to video for project : https://drive.google.com/file/d/1CY5JWrOP3sE6U21jbSnky0zvplNpMFX1/view?usp=sharing
