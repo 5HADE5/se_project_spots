@@ -83,13 +83,15 @@ function getCardElement(data) {
     .querySelector(".card")
     .cloneNode(true);
 
-  const cardNameE1 = cardElement.querySelector(".card__title");
+  const cardTitle = cardElement.querySelector(".card__title");
 
-  const cardNameE2 = cardElement.querySelector(".card__image");
+  const cardImage = cardElement.querySelector(".card__image");
 
-  cardNameE1.textContent = data.name;
+  cardTitle.textContent = data.name;
 
-  cardNameE2.src = data.link;
+  cardImage.src = data.link;
+
+  cardImage.alt = data.name;
 
   return cardElement;
 }
