@@ -11,10 +11,13 @@
     justify-content: center;
     padding: 0 20px;
     visibility: hidden;
+    transition: visibility 0.3s, opacity 0.3s ease-in;
+    opacity: 0;
 }
 
 .modal_opened{
     visibility: visible;
+    opacity: 1;
 }
 
 .modal__container{
@@ -27,7 +30,7 @@
     border-radius: 8px;
 }
 
-.modal__close-button{
+.modal__close-btn{
     position: absolute;
     background-color: white;
     top: 32px;
@@ -40,10 +43,10 @@
     opacity: 40%;
 }
 
-.modal__close-button:hover{
+.modal__close-btn:hover{
     opacity: 1;
     cursor: pointer;
-    
+    transition: opacity 0.3s, background 0.3s;
 }
 
 .modal__title{
@@ -77,7 +80,7 @@
     border: 2px solid rgba(0, 0, 0);
     cursor: pointer;
     transition-duration: 0.3s;
-  }
+}
 
 .modal__sub-button{
     background-color: #212121;
@@ -94,7 +97,55 @@
 .modal__sub-button:hover {
     opacity: 0.8;
     cursor: pointer;
-  }
+}
+
+
+.modal__container_type_preview {
+  transition: visibility 0.3s, opacity 0.3s ease-in;
+  background-color: transparent;
+  padding: 0;
+}
+
+.modal__image-container {
+  padding: 0;
+  position: relative;
+}
+
+.modal__image {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.modal__caption {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px);
+    border-radius: 8px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    background-color: rgba(33, 33, 33, 1);
+    color: #fff;
+}
+
+.modal__close-btn_preview {
+  background-image: url(../images/Variant3.svg);
+  top: 0;
+  right: -52.5px;
+  opacity: 1;
+  background-color: transparent;
+}
+
+.modal__close-btn_preview:hover {
+    opacity: .4;
+    transition-duration: 0.3s;
+}
+
 
 @media screen and (max-width: 627px) {
     .modal{
@@ -122,4 +173,22 @@
     .modal__sub-button{
         width: 100%;
     }
+    .modal__container_type_preview {
+        max-width: 90vw;
+        margin: 0 10px;
+      }
+    
+      .modal__image {
+        max-height: 75vh;
+        border-radius: 8px;
+      }
+    
+      .modal__caption {
+        font-size: 14px;
+      }
+      .modal__close-btn_preview {
+        right: 0px;
+        top: -48px;
+
+      }
 }
