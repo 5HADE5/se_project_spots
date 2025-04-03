@@ -99,16 +99,12 @@
     cursor: pointer;
 }
 
-
-.modal__container_type_preview {
-  transition: visibility 0.3s, opacity 0.3s ease-in;
-  background-color: transparent;
-  padding: 0;
-}
-
 .modal__image-container {
   padding: 0;
   position: relative;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
+  background-color: transparent;
+  padding: 0;
 }
 
 .modal__image {
@@ -161,7 +157,7 @@
         margin: 10px 0 34px;
     }
 
-    .modal__close-button{
+    .modal__close-btn{
         top: 12px;
         right: 12px;
     }
@@ -173,7 +169,7 @@
     .modal__sub-button{
         width: 100%;
     }
-    .modal__container_type_preview {
+    .modal__image-container {
         max-width: 90vw;
         margin: 0 10px;
       }
