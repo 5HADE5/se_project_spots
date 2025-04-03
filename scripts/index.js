@@ -29,8 +29,6 @@ const initialCards = [
   },
 ];
 
-
-
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const profileAddButton = document.querySelector(".profile__add-btn");
 const profileName = document.querySelector(".profile__name");
@@ -117,15 +115,11 @@ function handleAddCardSubmit(evt) {
   closeModal(cardModal);
 }
 
-
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
   openModal(editModal);
 });
-
-
-
 
 editModalCloseButton.addEventListener("click", () => {
   closeModal(editModal);
@@ -138,8 +132,6 @@ profileAddButton.addEventListener("click", () => {
 cardModalCloseBtn.addEventListener("click", () => {
   closeModal(cardModal);
 });
-
-
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
