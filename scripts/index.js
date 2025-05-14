@@ -140,3 +140,21 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+const modalList = document.querySelectorAll(".modal");
+modalList.forEach((eachModal)=> {
+  eachModal.addEventListener("click",(evt)=> {
+    if (evt.target.classList.contains("modal")){
+      closeModal(eachModal);
+    }
+  });
+});
+
+document.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape') {
+    const openedModal = document.querySelector('.modal_opened');
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+});

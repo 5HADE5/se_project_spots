@@ -142,6 +142,38 @@
   transition-duration: 0.3s;
 }
 
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error{
+  color: #FF0000B2;
+  opacity: 100%;
+  visibility: visible;
+}
+
+.modal__sub-button {
+  width: 156px;
+  height: 52px;
+  padding: 18px 0;
+  border: none;
+  background-color: #212121;
+  color: #fcf5e5;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.modal__sub-button:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.modal__sub-button_type_error{
+  opacity: 50%;
+}
+
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 10px;
