@@ -119,6 +119,7 @@ profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
   openModal(editModal);
+  resetValidation(editFormElement,[editModalNameInput,editModalDescriptionInput],settings);
 });
 
 editModalCloseButton.addEventListener("click", () => {
@@ -127,7 +128,11 @@ editModalCloseButton.addEventListener("click", () => {
 
 profileAddButton.addEventListener("click", () => {
   openModal(cardModal);
+  resetValidation(cardForm, [cardNameInput, cardLinkInput], settings);
+  toggleButtonState([cardNameInput, cardLinkInput], cardForm.querySelector(settings.submitButtonSelector), settings);
 });
+
+
 
 cardModalCloseBtn.addEventListener("click", () => {
   closeModal(cardModal);
